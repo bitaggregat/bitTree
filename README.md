@@ -4,6 +4,8 @@ The bitTree is a versatile, strictly limited edition DIY gadget that combines th
 
 ## Hardware
 
+### Pin Assignments
+
 | Component         |               Direction | PORT - PIN | Arduino-PIN |                      Comment |
 |:------------------|------------------------:|-----------:|------------:|-----------------------------:|
 | ATmega328PB       |                       - |          - |           - | With Micronucleus Bootloader |
@@ -26,6 +28,10 @@ The bitTree is a versatile, strictly limited edition DIY gadget that combines th
 | SPI-CIPO (MISO)   |                     SPI |        B-4 |          12 |                            - |
 | SPI-COPI (MOSI)   |                     SPI |        B-3 |          11 |                            - |
 | SPI-Clock         |                     SPI |        B-5 |          13 |                            - |
+
+### Schematic and project files
+
+The [schematic](./hardware/bitTree-Schematic.pdf) and the project files are located in the *hardware*-subdirectory. For additional information refer to the [Hardware README.md](./hardware/README.md).
 
 ## Updating the bitTree application
 
