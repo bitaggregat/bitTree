@@ -8,7 +8,7 @@ The bitTree is a versatile, strictly limited edition DIY gadget that combines th
 
 | Component         |               Direction | PORT - PIN | Arduino-PIN |                      Comment |
 |:------------------|------------------------:|-----------:|------------:|-----------------------------:|
-| ATmega328PB       |                       - |          - |           - | With Micronucleus Bootloader |
+| ATmega328PB       |                       - |          - |           - | With Micronucleus bootloader |
 | Led 1 (red)       |                    GPIO |        D-5 |           5 |      Low-Active (VCC driven) |
 | Led 3 (red)       |                    GPIO |        C-4 |       18/A4 |      Low-Active (VCC driven) |
 | Led 4 (red)       |                    GPIO |        C-3 |       17/A3 |      Low-Active (VCC driven) |
@@ -45,6 +45,12 @@ It is not yet possible to flash the application directly from the Arduino IDE. T
 
 What happens here in the background: As soon as the bitTree is supplied with power, the bootloader (micronucleus) starts. If there is no communication between the bitTree and the host (PC) within 2s, the flashed application starts, if a valid one is available.
 The bootloader registers a USB device in the host, with which the “micronucleus commandline tool” communicates and can manipulate the flash in the bitTree.
+
+## Build and install the bootloader
+
+It is only required to build and update/install the bootloader, if you got a PCB directly from the assembly line. Refer to the [bootloader README](./software/bootloader/README.md) for some first instructions.
+
+You also can use the hardware without the bootloader, but then you always have to program it with an external programmer. It is not possible to program the application through USB without the bootloader.
 
 ## Customize bitTree
 
